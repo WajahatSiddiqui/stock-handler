@@ -1,0 +1,12 @@
+server:
+  port: 8001
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    leaseExpirationDurationInSeconds: 5
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7777/eureka/
+    lease:
+      duration: 5

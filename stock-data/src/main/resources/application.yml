@@ -1,0 +1,17 @@
+server:
+  port: 8002
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    leaseExpirationDurationInSeconds: 5
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7777/eureka/
+    lease:
+      duration: 5
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none

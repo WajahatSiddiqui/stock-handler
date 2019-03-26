@@ -1,0 +1,1 @@
+INSERT INTO quote (id, symbol, timestamp, open, high, low, price, change_percentage) values (1, 'GOOG', '2019-03-26 00:03:00', 100.21, 100.31, 100.41, 100.32, 0.006);
