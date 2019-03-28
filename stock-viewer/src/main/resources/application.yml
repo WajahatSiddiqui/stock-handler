@@ -10,3 +10,17 @@ eureka:
       defaultZone: http://localhost:7777/eureka/
     lease:
       duration: 5
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: CmNR$)fw@)y[bTm8
+
+queue:
+  name: 'stock-queue'
+fanout:
+  exchange: 'stock-exchange'
+routing:
+  key: 'stock.key'

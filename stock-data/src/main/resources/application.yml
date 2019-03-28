@@ -12,6 +12,10 @@ eureka:
       duration: 5
 
 spring:
+  h2:
+    console:
+      enabled: true
   jpa:
+    show-sql: false
     hibernate:
       ddl-auto: none

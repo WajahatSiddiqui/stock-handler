@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
-@EnableDiscoveryClient
 @Import(StockDataConfig.class)
 public class StockDataApplication {
 	public static void main(String[] args) {

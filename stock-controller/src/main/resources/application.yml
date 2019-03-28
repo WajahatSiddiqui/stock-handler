@@ -10,3 +10,30 @@ eureka:
       defaultZone: http://localhost:7777/eureka/
     lease:
       duration: 5
+
+alphavantage:
+  uri: 'https://www.alphavantage.co'
+  query: 'query'
+  function: 'function'
+  function_value: 'GLOBAL_QUOTE'
+  symbol: 'symbol'
+  apikey: 'apikey'
+  apikey_value: 'EXU41DQW1514OWAC'
+
+quote:
+  cron:
+    expr: "0 0/5 * * * *"
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: CmNR$)fw@)y[bTm8
+
+queue:
+  name: 'stock-queue'
+fanout:
+  exchange: 'stock-exchange'
+routing:
+  key: 'stock.key'

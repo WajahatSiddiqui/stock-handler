@@ -4,7 +4,9 @@ import com.wajahat.service.stockdata.core.domain.Quote;
 import com.wajahat.service.stockdata.core.service.api.QuoteService;
 import org.springframework.stereotype.Component;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 import static java.util.Objects.requireNonNull;
 
@@ -17,7 +19,29 @@ public class QuotesHandler {
     }
 
     public List<Quote> getBySymbol(String symbol) {
-        // ToDo validate symbol
+        if (!getAllSymbols().contains(symbol))
+            return Collections.emptyList();
+
         return quoteService.findBySymbol(symbol);
+    }
+
+    public List<Quote> getAll() {
+        return quoteService.findAll();
+    }
+
+    public boolean create(Quote quote) {
+        return quoteService.create(quote);
+    }
+
+    public boolean update(Quote quote) {
+        return quoteService.update(quote);
+    }
+
+    public boolean delete(String symbol) {
+        return quoteService.delete(symbol);
+    }
+
+    public Set<String> getAllSymbols() {
+        return quoteService.findAllSymbols();
     }
 }
